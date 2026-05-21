@@ -1,0 +1,545 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f5f5f5;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* MENU LATERAL */
+
+.menulateral{
+    width: 230px;
+
+    background: linear-gradient(to right, #1a0736, #2c084b, #411272);
+
+    border-radius: 25px;
+    padding: 20px 15px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 160px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.menulateral ul{
+    list-style: none;
+    margin-top: 40px;
+}
+
+.menulateral li{
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.menulateral li:hover{
+    background: #8c3dd8;
+}
+
+.ativo{
+    background: #7e3ac5;
+}
+
+.menulateral li i{
+    font-size: 15px;
+}
+
+.sairconta{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* CONTEÚDO */
+
+.conteudo{
+    flex: 1;
+    background: white;
+    margin-left: 15px;
+    border-radius: 25px;
+    padding: 35px 45px;
+    overflow-y: auto;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.20);
+}
+
+/* TOPO */
+
+.conteudotopo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.conteudotopo h1{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.conteudotopo p{
+    color: #555;
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+/* BOTÕES TOPO */
+
+.botaolateral{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botaolateral button{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    border: 2px solid #4b007d;
+
+    background: white;
+    color: #4b007d;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    font-size: 18px;
+}
+
+.botaolateral button:hover{
+    background: #4b007d;
+    color: white;
+}
+
+/* PERFIL */
+
+.perfil{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* FOTO PERFIL */
+
+.fa-circle-user{
+    font-size: 180px;
+    color: #7B2CBF;
+
+    margin: 0;
+    padding: 0;
+
+    flex-shrink: 0;
+}
+
+/* INFORMAÇÕES */
+
+.info-perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-perfil h2{
+    font-size: 55px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.info-perfil p{
+    font-size: 24px;
+    color: #555;
+}
+
+/* CAMPOS */
+
+.campos-perfil{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.campos-perfil input{
+    width: 100%;
+    padding: 20px;
+
+    border: 2px solid #dcdcdc;
+    border-radius: 20px;
+
+    font-size: 20px;
+
+    background-color: white;
+    color: #444;
+}
+
+.campos-perfil input:disabled{
+    background-color: #eeeeee;
+}
+
+/* BOTÃO */
+
+.botao-editar{
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 35px;
+    margin-right: 10px;
+}
+
+#btnEditar{
+    background-color: #7B2CBF;
+    color: white;
+
+    border: none;
+    border-radius: 18px;
+
+    padding: 18px 40px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnEditar:hover{
+    transform: scale(1.05);
+}/* BUSCA */
+
+.buscar-ajuda{
+    width: 400px;
+    height: 55px;
+
+    background: white;
+
+    border: 2px solid #dcdcdc;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    margin-top: 20px;
+}
+
+.buscar-ajuda input{
+    border: none;
+    outline: none;
+
+    width: 100%;
+
+    font-size: 18px;
+
+    background: transparent;
+}
+
+.buscar-ajuda i{
+    color: #7B2CBF;
+    font-size: 25px;
+}
+
+/* CONTEÚDO */
+
+.conteudo-ajuda{
+    display: flex;
+    gap: 30px;
+
+    margin-top: 30px;
+}
+
+/* PERGUNTAS */
+
+.perguntas{
+    flex: 1;
+}
+
+.perguntas h2{
+    margin-bottom: 15px;
+}
+
+.card-pergunta{
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.item-pergunta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+
+    border-bottom: 1px solid #ececec;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #4b007d;
+}
+
+.item-pergunta:last-child{
+    border-bottom: none;
+}
+
+/* TUTORIAIS */
+
+.tutoriais{
+    flex: 1;
+}
+
+.tutoriais h2{
+    margin-bottom: 15px;
+}
+
+
+.box-tutorial img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+/* CONTATO */
+
+.contato{
+    margin-top: 35px;
+}
+
+.contato h2{
+    margin-bottom: 20px;
+}
+
+.cards-contato{
+    display: flex;
+    gap: 20px;
+}
+
+.card-contato{
+    flex: 1;
+
+    background: #f4eefb;
+
+    border-radius: 20px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-contato:hover{
+    transform: translateY(-5px);
+}
+
+.card-contato i{
+    font-size: 50px;
+
+    color: #7B2CBF;
+
+    margin-bottom: 15px;
+}
+
+.card-contato h3{
+    color: #7B2CBF;
+
+    margin-bottom: 10px;
+}
+
+.card-contato p{
+    color: #555;
+}
+/* POPUP AJUDA */
+
+.popup-ajuda{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.popup-conteudo-ajuda{
+    width: 420px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+}
+
+.topo-popup{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.topo-popup h2{
+    color: #4b007d;
+
+    font-size: 24px;
+}
+
+.topo-popup button{
+    border: none;
+
+    background: transparent;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.popup-conteudo-ajuda p{
+    color: #555;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+/*modo escuro*/
+
+.dark{
+    background: #1e1e1e;
+}
+
+.dark .conteudo{
+    background: #2b2b2b;
+    color: white;
+}
+
+.dark .card,
+.dark .botaodeacao,
+.dark .menulembretesinferior{
+    background: #383838;
+    color: white;
+}
+
+.dark .card p,
+.dark .menuseguranca p,
+.dark .lembreteitemum p,
+.dark .lembreteitemdois p,
+.dark .lembreteitemtres p,
+.dark .conteudotopo p{
+    color: #d1d1d1;
+}
+
+.dark .buscar-ajuda{
+    background: #3a3a3a;
+    border: 2px solid #555;
+}
+
+.dark .buscar-ajuda input{
+    background: transparent;
+    color: white;
+}
+
+.dark .buscar-ajuda input::placeholder{
+    color: #cfcfcf;
+}
+
+.dark .buscar-ajuda i{
+    color: #bb86fc;
+}
+
+.dark .card-pergunta,
+.dark .box-tutorial,
+.dark .card-contato{
+    background: #3a3a3a;
+    color: white;
+}
+
+.dark .item-pergunta{
+    border-bottom: 1px solid #555;
+    color: white;
+}
+
+.dark .item-pergunta i{
+    color: #bb86fc;
+}
+
+.dark .card-contato h3,
+.dark .perguntas h2,
+.dark .tutoriais h2,
+.dark .contato h2{
+    color: white;
+}
+
+.dark .card-contato p{
+    color: #d1d1d1;
+}
+
+.dark .card-contato i{
+    color: #bb86fc;
+}
+
+.dark .card-contato:hover{
+    background: #444;
+    transition: 0.3s;
+}

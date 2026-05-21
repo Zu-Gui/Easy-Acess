@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoriais - Easy Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleperfil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="menulateral">
+    <div>
+      <div class="logo">
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+            <nav>
+        <ul>
+          <li onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house">
+          </i> Início</li>
+          
+
+
+          <li onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li class="ativo" onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="sairconta" onclick="sairConta()">
+      Sair da conta <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+</div>
+
+<main class="conteudo">
+    <header class="conteudotopo">
+      <div>
+        <h1>Perfil</h1>
+        <p>Edite e atualize suas informações.</p>
+      </div>
+      <div class="botaolateral">
+        <button onclick="aumentarFonte()">+A</button>
+        <button onclick="diminuirFonte()">-A</button>
+        <button onclick="modoEscuro()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button onclick="notificacao()">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button onclick="perfil()">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </header>
+
+<div class="perfil">
+    <i class="fa-solid fa-circle-user"></i>
+    <div class="info-perfil">
+        <h2>Maria Silva</h2>
+        <p>mariasilva@gmail.com</p>
+    </div>
+</div>
+<br><br>
+<div class="campos-perfil">
+
+    <input type="text" id="nome" value="Maria Silva" disabled>
+
+    <input type="email" id="email" value="mariasilva@gmail.com" disabled>
+
+    <input type="text" id="data" value="15/08/2002" disabled>
+
+    <input type="text" id="telefone" value="(17) 99999-9999" disabled>
+
+    <input type="text" id="sexo" value="Feminino" disabled>
+
+    <input type="text" id="cpf" value="123.456.789-00" disabled>
+
+</div>
+
+<div class="botao-editar">
+    <button id="btnEditar" onclick="editarPerfil()">
+        <i class="fa-solid fa-pen"></i> EDITAR
+    </button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

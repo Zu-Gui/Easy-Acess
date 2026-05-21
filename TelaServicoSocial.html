@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviço Social - Easy Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleservicosocial.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="menulateral">
+    <div>
+      <div class="logo">
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+      <nav>
+        <ul>
+          <li onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house">
+          </i> Início</li>
+          </li>
+
+
+          <li onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li class="ativo" onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="sairconta" onclick="sairConta()">
+      Sair da conta <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+</div>
+
+<main class="conteudo">
+
+    <header class="conteudotopo">
+      <div>
+        <h1>Serviços Social</h1>
+        <p>Encontre e acesse seus serviços financeiros com facilidade.</p>
+      </div>
+
+      <div class="botaolateral">
+        <button onclick="aumentarFonte()">+A</button>
+        <button onclick="diminuirFonte()">-A</button>
+        <button onclick="modoEscuro()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button onclick="notificacao()">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button onclick="perfil()">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="linha">
+  
+            <div class="barra-pesquisa">
+                <input type="text" id="buscar" placeholder="Buscar serviço">
+            <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+  </div>
+  <br><br>
+  <div class="cards-servicos">
+
+  <div class="card-servico"
+      onclick="window.open('https://www.gov.br/saude/pt-br', '_blank')">
+
+      <img src="logosussocial.png" alt="SUS">
+
+      <h3>SUS</h3>
+
+      <p>Informações, consultas e serviços de saúde</p>
+
+</div>
+
+  <div class="card-servico"
+      onclick="window.open('https://meu.inss.gov.br/#/login', '_blank')">
+
+    <img src="INSS (1).png" alt="INSS">
+    <h3>INSS</h3>
+    <p>Consulte benefícios, consultas e serviços</p>
+  </div>
+
+  <div class="card-servico"
+    onclick="window.open('https://cadunico.dataprev.gov.br/#/', '_blank')">
+    <img src="CADUNICO.png" alt="CadÚnico">
+    <h3>CadÚnico</h3>
+    <p>Consulte e atualize seus dados</p>
+  </div>
+
+  <div class="card card-lateral">
+    <div class="icone-topo">
+      <br>
+    <i class="fa-regular fa-calendar"></i>
+    </div>
+    <h4>Agendamentos Públicos</h4>
+    <p>Agende atendimentos em órgãos públicos e unidades</p>
+   <button onclick="abrirModalAgendamento()">ACESSAR</button>
+  </div>
+</div>
+
+<div class="modal" id="modalAgendamento">
+
+  <div class="modal-conteudo">
+
+    <h2>Agendar Atendimento</h2>
+
+    <p>Qual serviço social você deseja?</p>
+
+    <select id="servicoSocial">
+
+      <option>SUS</option>
+
+      <option>INSS</option>
+
+      <option>CadÚnico</option>
+
+    </select>
+
+    <br><br>
+
+    <p>Escolha uma data:</p>
+
+    <input type="date" id="dataAgendamento">
+
+    <br><br>
+
+    <button onclick="confirmarAgendamento()">
+      Confirmar
+    </button>
+
+    <button type="button" onclick="fecharModal()">
+      Fechar
+    </button>
+
+  </div>
+
+</div>
+
+<div class="container-beneficios">
+
+  <div class="card-beneficios">
+    <div class="info">
+      <i class="fa-solid fa-users"></i>
+      <div>
+        <h3>Benefícios Sociais</h3>
+        <p>Consulte benefícios e programas sociais</p>
+      </div>
+    </div>
+
+    <div class="icone">
+      <i class="fa-solid fa-handshake"></i>
+    </div>
+  </div>
+
+  <div class="card-beneficios">
+    <div class="info">
+      <i class="fa-solid fa-file-lines"></i>
+      <div>
+        <h3>Documentos Digitais</h3>
+        <p>Acesse e organize seus documentos importantes</p>
+      </div>
+    </div>
+
+    <div class="icone">
+      <i class="fa-solid fa-folder-open"></i>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,370 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f7f4ff, #efecf8);
+    color: #3b0f68;
+    min-height: 100vh;
+}
+
+/* =========================
+   MENU SUPERIOR
+========================= */
+.top-header {
+    width: 100%;
+    height: 74px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #3b0f68;
+}
+
+  .logo-img {
+    width: 48px;      /* ajuste o tamanho como desejar */
+    height: 48px;
+    object-fit: contain;
+  }
+  
+  .logo span {
+    font-size: 22px;
+  }
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-text {
+    font-size: 18px;
+    color: #7e3ac5;
+    font-weight: 500;
+}
+
+.btn-cadastrar {
+    background: linear-gradient(90deg, #491d75, #7e3ac5);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(109, 40, 217, 0.3);
+    transition: 0.3s;
+}
+
+.btn-cadastrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(109, 40, 217, 0.35);
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+.login-page {
+    padding: 15px 40px;
+}
+
+.login-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #ddd6fe;
+    border-radius: 28px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+
+    /* CONTAINER PRINCIPAL BEM MAIS BAIXO */
+    min-height: 560px;
+
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.06);
+}
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+.left-panel {
+    background: #f8f5ff;
+    display: flex;
+    align-items: center;      /* Centraliza verticalmente */
+    justify-content: center;  /* Centraliza horizontalmente */
+    padding: 30px 45px;
+}
+
+.left-content {
+    max-width: 520px;         /* Aumenta a largura para caber tudo em uma linha */
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centraliza o conteúdo dentro da área */
+    align-items: center;      /* Centraliza horizontalmente */
+
+    text-align: center;       /* Centraliza os textos */
+}
+
+
+/* Título */
+.left-content h1 {
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #7e3ac5;
+    margin-bottom: 16px;
+    white-space: nowrap;      /* Impede quebra de linha */
+}
+
+.left-content h1 span {
+    color: #7e3ac5;
+}
+
+/* Texto abaixo */
+.left-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #3b0f68;
+    margin-bottom: 20px;
+    white-space: nowrap;      /* Impede quebra de linha */
+}
+
+/* Ilustração */
+.illustration {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.illustration img {
+    width: 100%;
+
+    /* AUMENTE ESTE VALOR PARA DEIXAR A IMAGEM MAIOR */
+    max-width: 380px;
+
+    opacity: 0.95;
+}
+
+/* =========================
+   LADO DIREITO
+========================= */
+.right-panel {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 60px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 520px;
+}
+
+.form-box h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #3b0f68;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #3b0f68;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+/* Ícone da esquerda (usuário e cadeado) */
+.input-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    /* AJUSTE ESTE VALOR PARA ALTERAR O TAMANHO DA IMAGEM */
+    width: 20px;
+    height: 20px;
+
+    /* Mantém a proporção correta */
+    object-fit: contain;
+
+    /* Deixa a imagem um pouco mais discreta */
+    opacity: 0.75;
+
+    /* Impede seleção da imagem */
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Ícone da direita (olho) */
+.eye-icon-img {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    /* AJUSTE ESTE VALOR PARA ALTERAR O TAMANHO */
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+/* Ajuste do input para não sobrepor os ícones */
+.input-wrapper input {
+    width: 100%;
+    height: 54px;
+    border: 2px solid #e2ddf7;
+    border-radius: 12px;
+
+    /* Espaço à esquerda e à direita para os ícones */
+    padding-left: 50px;
+    padding-right: 50px;
+
+    font-size: 18px;
+    color: #3b0f68;
+    outline: none;
+    transition: 0.3s;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #7e3ac5;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* =========================
+   BOTÃO LOGIN
+========================= */
+.btn-login {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #491d75, #7e3ac5);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    box-shadow: 0 8px 20px rgba(91, 33, 182, 0.25);
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(91, 33, 182, 0.3);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #4a4f7c;
+}
+
+.footer i {
+    color: #7e3ac5;
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer p {
+    font-size: 18px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 1024px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .top-header {
+        padding: 0 20px;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-text {
+        font-size: 16px;
+    }
+
+    .right-panel {
+        padding: 40px;
+    }
+
+    .form-box h2 {
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+
+    .form-group label,
+    .forgot-password a {
+        font-size: 18px;
+    }
+
+    .input-wrapper input,
+    .btn-login {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .btn-login {
+        font-size: 22px;
+    }
+}

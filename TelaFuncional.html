@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Access</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylefuncional.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="menulateral">
+
+    <div>
+      <div class="logo">
+
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+      <nav>
+        <ul>
+          <li class="ativo" onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house">
+          </i> Início
+          </li>
+
+          <li onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="sairconta" onclick="sairConta()">
+      Sair da conta <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+  </div>
+
+  <main class="conteudo">
+
+    <header class="conteudotopo">
+      <div>
+        <h1>Olá, Maria!</h1>
+        <p>Que bom te ver aqui. O que deseja fazer hoje?</p>
+      </div>
+
+      <div class="botaolateral">
+        <button onclick="aumentarFonte()">+A</button>
+        <button onclick="diminuirFonte()">-A</button>
+        <button onclick="modoEscuro()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button onclick="notificacao()">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button onclick="perfil()">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </header>
+
+
+    <section class="cards">
+
+      <div class="card banco">
+        <div class="icone azul">
+          <i class="fa-solid fa-building-columns"></i>
+        </div>
+
+        <h3>Serviços Bancários</h3>
+        <p>Consulta de saldo, pagamentos e transferências.</p>
+
+        <button onclick="abrirPagina('TelaServico.html')">
+          ACESSAR →
+        </button>
+      </div>
+
+      <div class="card social">
+        <div class="icone verde">
+          <i class="fa-solid fa-users"></i>
+        </div>
+
+        <h3>Serviços Sociais</h3>
+        <p>Acesso a benefícios, programas e serviços de apoio.</p>
+
+        <button onclick="abrirPagina('TelaServicoSocial.html')">
+          ACESSAR →
+        </button>
+      </div>
+
+      <div class="card senha">
+        <div class="icone roxo">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <h3>Gerenciar Senhas</h3>
+        <p>Guarde suas senhas com segurança e facilidade.</p>
+
+        <button onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+          ACESSAR →
+        </button>
+      </div>
+
+    </section>
+
+    <section class="conteudoinferior">
+
+  
+      <div class="botaodeacao">
+
+        <h2>Ações rápidas</h2>
+        <br>
+        <div class="menudeacao">
+
+          <div class="botaoacao" onclick="adicionarLembrete()">
+            <i class="fa-solid fa-square-check"></i>
+            <p>Adicionar lembrete</p>
+            
+          </div>
+
+          <div class="botaoacao" onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            <p>Guardar senha</p>
+          </div>
+
+          <div class="botaoacao" onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            <p>Ver tutoriais</p>
+          </div>
+
+          <div class="botaoacao" onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            <p>Editar perfil</p>
+          </div>
+
+        </div>
+        <br>
+        <div class="menuseguranca">
+          <i class="fa-solid fa-shield-halved shield"></i>
+          <div>
+            <h3>Seus dados estão protegidos</h3>
+            <p>Utilizamos tecnologia de ponta para garantir sua segurança e privacidade.</p>
+          </div>
+          <i class="fa-solid fa-lock cadeado"></i>
+        </div>
+      </div>
+
+    
+      <div class="menulembretesinferior">
+
+    <div class="titulolembretes">
+        <h2>Lembretes importantes</h2>
+        <a href="#">Ver todos</a>
+    </div>
+
+    <!-- ITEM 1 -->
+    <div class="lembreteitem">
+        <div class="icone calendario">
+            <i class="fa-solid fa-calendar"></i>
+        </div>
+
+        <div class="textolembrete">
+            <h4>Pagamento da conta de luz</h4>
+            <p>Vencimento: 22/07/2026</p>
+        </div>
+
+        <i class="fa-solid fa-chevron-right seta"></i>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="lembreteitem">
+        <div class="icone remedio">
+            <i class="fa-solid fa-capsules"></i>
+        </div>
+
+        <div class="textolembrete">
+            <h4>Medicamento</h4>
+            <p>Tomar às 15:00</p>
+        </div>
+
+        <i class="fa-solid fa-chevron-right seta"></i>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="lembreteitem">
+        <div class="icone livro">
+            <i class="fa-solid fa-book"></i>
+        </div>
+
+        <div class="textolembrete">
+            <h4>Aula no CRAS</h4>
+            <p>20/06/2026 às 09:00</p>
+        </div>
+
+        <i class="fa-solid fa-chevron-right seta"></i>
+    </div>
+
+</div>
+      </section>
+
+    </main>
+
+  </div>
+  <div class="modal-lembrete" id="modalLembrete">
+
+    <div class="conteudo-modal">
+
+        <h2>Novo Lembrete</h2>
+
+        <input type="text" id="tituloEvento" placeholder="Título do evento">
+
+        <input type="date" id="dataEvento">
+
+        <input type="time" id="horaEvento">
+
+        <div class="botoes-modal">
+
+            <button onclick="salvarLembrete()">
+                Salvar
+            </button>
+
+            <button onclick="fecharLembrete()">
+                Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

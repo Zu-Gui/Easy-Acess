@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f5f5f5;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+
+.menulateral{
+    width: 230px;
+
+    background: linear-gradient(to right, #1a0736, #2c084b, #411272);
+
+    border-radius: 25px;
+    padding: 20px 15px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 160px;
+    height: 110px;
+    object-fit: contain;
+}
+
+
+.menulateral ul{
+    list-style: none;
+    margin-top: 40px;
+}
+
+.menulateral li{
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.menulateral li:hover{
+    background: #8c3dd8;
+}
+
+.ativo{
+    background: #7e3ac5;
+}
+
+.menulateral li i{
+    font-size: 15px;
+}
+
+
+
+.sairconta{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.conteudo{
+    flex: 1;
+    background: white;
+    margin-left: 15px;
+    border-radius: 25px;
+    padding: 25px;
+    overflow-y: auto;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.20);
+}
+
+.conteudotopo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.conteudotopo h1{
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.conteudotopo p{
+    color: #555;
+    margin-top: 5px;
+}
+
+/* BOTÕES TOPO */
+
+.botaolateral{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botaolateral button{
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: 2px solid #4b007d;
+
+    background: white;
+    color: #4b007d;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botaolateral button:hover{
+    background: #4b007d;
+    color: white;
+}
+
+.barra-pesquisa {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 12px;
+  padding: 5px 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.barra-pesquisa input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.barra-pesquisa input::placeholder {
+  color: #8a5cc2;
+}
+
+.barra-pesquisa button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #8a5cc2;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-adicionar {
+  background-color: #7b3fcf; /* roxo */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: 0.2s;
+}
+
+.botao-adicionar i {
+  font-size: 14px;
+}
+
+.botao-adicionar:hover {
+  background-color: #692fc2;
+  transform: scale(1.03);
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-banco{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    margin: 20px 0;
+
+    width: 100%;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+/* LOGO */
+.logo-banco {
+  width: 100px;
+  height: 100px;
+  border-radius: 80%;
+}
+
+/* TEXTO */
+.info-banco h3 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.info-banco p {
+  margin: 5px 0 15px;
+  color: #555;
+  font-size: 18px;
+}
+
+/* BOTÕES */
+
+.popup-bancos{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.4);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.popup-conteudo{
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    width: 400px;
+
+    text-align: center;
+}
+
+.popup-conteudo h2{
+    margin-bottom: 20px;
+}
+
+.opcoes-bancos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.opcoes-bancos button{
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #7B2CBF;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.opcoes-bancos button:hover{
+    background: #6920ad;
+}
+
+.fechar-popup{
+    margin-top: 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #555;
+
+    cursor: pointer;
+}
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-acessar {
+  background-color: #cbb3f5;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #5a2ea6;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.btn-senha {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #5a2ea6;
+  cursor: pointer;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* HOVER */
+.btn-acessar:hover {
+  background-color: #b79df0;
+}
+
+.btn-senha:hover {
+  background-color: #eaeaea;
+}
+
+/*modo escuro*/
+
+.dark{
+    background: #1e1e1e;
+}
+
+.dark .conteudo{
+    background: #2b2b2b;
+    color: white;
+}
+
+.dark .card,
+.dark .botaodeacao,
+.dark .menulembretesinferior{
+    background: #383838;
+    color: white;
+}
+
+.dark .card p,
+.dark .menuseguranca p,
+.dark .lembreteitemum p,
+.dark .lembreteitemdois p,
+.dark .lembreteitemtres p,
+.dark .conteudotopo p{
+    color: #d1d1d1;
+}
+.dark .card-banco{
+    background: #3a3a3a;
+    color: white;
+}
+
+.dark .info-banco h3{
+    color: white;
+}
+
+.dark .info-banco p{
+    color: #d1d1d1;
+}
+
+.dark .barra-pesquisa{
+    background: #3a3a3a;
+    border: 2px solid #555;
+}
+
+.dark .barra-pesquisa input{
+    background: transparent;
+    color: white;
+}
+
+.dark .barra-pesquisa input::placeholder{
+    color: #cfcfcf;
+}
+
+.dark .barra-pesquisa button{
+    background: transparent;
+    color: #bb86fc;
+}
+
+.dark .botao-adicionar{
+    background: #7B2CBF;
+    color: white;
+}
+
+.dark .btn-acessar{
+    background: #7B2CBF;
+    color: white;
+}
+
+.dark .btn-senha{
+    background: #4a4a4a;
+    color: white;
+    border: 1px solid #666;
+}

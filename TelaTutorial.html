@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoriais - Easy Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styletutorial.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="menulateral">
+    <div>
+      <div class="logo">
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+       <nav>
+        <ul>
+          <li onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house">
+          </i> Início</li>
+          </li>
+
+
+          <li onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li  class="ativo" onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="sairconta" onclick="sairConta()">
+      Sair da conta <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+</div>
+
+<main class="conteudo">
+    <header class="conteudotopo">
+      <div>
+        <h1>Tutoriais</h1>
+        <p>Encontre e acesse seus serviços financeiros com facilidade.</p>
+      </div>
+
+      <div class="botaolateral">
+        <button onclick="aumentarFonte()">+A</button>
+        <button onclick="diminuirFonte()">-A</button>
+        <button onclick="modoEscuro()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button onclick="notificacao()">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button onclick="perfil()">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="linha">
+  
+            <div class="barra-pesquisa">
+                <input type="text" id="buscar" placeholder="Buscar Tutoriais">
+            <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+  </div>
+  <br><br>
+  <div class="grid-tutoriais">
+
+    <div class="card-tutorial">
+       
+    <img src="capatutorial01.png" 
+     alt="Tutorial 1"
+     onclick="window.open('TelaTutorialImage.html', '_blank')">
+        
+
+        <div class="info-tutorial">
+
+            <div>
+                <h3>Tutorial 1</h3>
+                <h4>Serviços Bancários</h4>
+                <p>Como acessar e utilizar serviços bancários online.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-tutorial">
+    <a href="https://www.youtube.com/watch?v=SEU_LINK" target="_blank">
+    <img src="capatutorial02.png" alt="Tutorial 2">
+    </a>
+
+        <div class="info-tutorial">
+            <div>
+                <h3>Tutorial 2</h3>
+                <h4>Segurança e Privacidade</h4>
+                <p>Aprenda a proteger seus dados e manter sua conta segura.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card-tutorial">
+        <a href="https://www.youtube.com/watch?v=SEU_LINK" target="_blank">
+            <img src="capatutorial03.png" alt="Tutorial 1">
+        </a>
+
+        <div class="info-tutorial">
+            <div>
+                <h3>Tutorial 3</h3>
+                <h4>Documentos e Declarações</h4>
+                <p>
+                    Como acessar e emitir seus documentos e declarações.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

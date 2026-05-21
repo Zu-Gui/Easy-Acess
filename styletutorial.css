@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f5f5f5;
+}
+.container{
+    display: flex;
+    min-height: 100vh;
+    padding: 10px;
+}
+/* MENU LATERAL */
+.menulateral{
+    width: 230px;
+
+    background: linear-gradient(to right, #1a0736, #2c084b, #411272);
+
+    border-radius: 25px;
+    padding: 20px 15px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 160px;
+    height: 110px;
+    object-fit: contain;
+}
+
+
+.menulateral ul{
+    list-style: none;
+    margin-top: 40px;
+}
+
+.menulateral li{
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.menulateral li:hover{
+    background: #8c3dd8;
+}
+
+.ativo{
+    background: #7e3ac5;
+}
+
+.menulateral li i{
+    font-size: 15px;
+}
+
+.sairconta{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* CONTEÚDO */
+
+.conteudo{
+    flex: 1;
+    background: white;
+    margin-left: 15px;
+    border-radius: 25px;
+    padding: 25px;
+    overflow-y: auto;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.20);
+}
+
+/* TOPO */
+
+.conteudotopo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.conteudotopo h1{
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.conteudotopo p{
+    color: #555;
+    margin-top: 5px;
+}
+
+.botaolateral{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botaolateral button{
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: 2px solid #4b007d;
+
+    background: white;
+    color: #4b007d;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botaolateral button:hover{
+    background: #4b007d;
+    color: white;
+}
+
+/* BARRA DE PESQUISA */
+
+.barra-pesquisa{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 12px;
+    padding: 5px 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.barra-pesquisa input{
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.barra-pesquisa input::placeholder{
+    color: #8a5cc2;
+}
+
+.barra-pesquisa button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #8a5cc2;
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-tutoriais{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-tutorial{
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+
+    transition: 0.2s;
+}
+
+.card-tutorial:hover{
+    transform: translateY(-5px);
+}
+
+.card-tutorial img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.info-tutorial{
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 22px;
+}
+
+.info-tutorial h3{
+    color: #6d35b1;
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.info-tutorial h4{
+    color: #444;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.info-tutorial p{
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/*modo escuro*/
+
+.dark{
+    background: #1e1e1e;
+}
+
+.dark .conteudo{
+    background: #2b2b2b;
+    color: white;
+}
+
+.dark .card,
+.dark .botaodeacao,
+.dark .menulembretesinferior{
+    background: #383838;
+    color: white;
+}
+
+.dark .card p,
+.dark .menuseguranca p,
+.dark .lembreteitemum p,
+.dark .lembreteitemdois p,
+.dark .lembreteitemtres p,
+.dark .conteudotopo p{
+    color: #d1d1d1;
+}
+.dark .card-tutorial{
+    background: #3a3a3a;
+    color: white;
+}
+
+.dark .info-tutorial h3,
+.dark .info-tutorial h4{
+    color: white;
+}
+
+.dark .info-tutorial p{
+    color: #d1d1d1;
+}
+
+.dark .barra-pesquisa{
+    background: #3a3a3a;
+    border: 2px solid #555;
+}
+
+.dark .barra-pesquisa input{
+    background: transparent;
+    color: white;
+}
+
+.dark .barra-pesquisa input::placeholder{
+    color: #cfcfcf;
+}
+
+.dark .barra-pesquisa button{
+    background: transparent;
+    color: #bb86fc;
+}
+
+.dark .card-tutorial:hover{
+    background: #444;
+    transition: 0.3s;
+}

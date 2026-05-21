@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Senhas - Easy Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylegerenciamentosenha.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="menulateral">
+    <div>
+      <div class="logo">
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+      <nav>
+        <ul>
+          <li  onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house">
+          </i> Início</li>
+          </li>
+
+
+          <li onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li class="ativo" onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="sairconta" onclick="sairConta()">
+      Sair da conta <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+</div>
+
+<main class="conteudo">
+
+    <header class="conteudotopo">
+      <div>
+        <h1>Gerenciamento de Senhas</h1>
+        <p>Encontre e acesse seus serviços financeiros com facilidade.</p>
+      </div>
+
+      <div class="botaolateral">
+        <button onclick="aumentarFonte()">+A</button>
+        <button onclick="diminuirFonte()">-A</button>
+        <button onclick="modoEscuro()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button onclick="notificacao()">
+         <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button onclick="perfil()">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </header>
+
+        <div class="topo-senha">
+            <div class="barra-pesquisa">
+                <input type="text" id="buscar" placeholder="Buscar senha">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <button class="btn-adicionar" onclick="abrirModal()">
+                <i class="fa-solid fa-plus"></i>
+                ADICIONAR
+            </button>
+        </div>
+        <br><br>
+        <div class="lista-senhas">
+
+
+
+    <div class="card-senha">
+
+        <div class="dados-esquerda">
+
+            <div>
+                <h3>INSS</h3>
+                <p>maria.silva03@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="senha" data-senha="12345">
+            *****
+        </div>
+
+        <div class="acoes">
+
+            <i class="fa-regular fa-eye" onclick="mostrarSenha(this)"></i>
+
+            <i class="fa-solid fa-pen"></i>
+
+            <i class="fa-regular fa-trash-can" onclick="excluirSenha(this)"></i>
+
+        </div>
+
+    </div>
+
+
+    <div class="card-senha">
+
+        <div class="dados-esquerda">
+
+            <div>
+                <h3>Caixa Econômica</h3>
+                <p>mariasilva123</p>
+            </div>
+
+        </div>
+
+        <div class="senha" data-senha="98765">
+            *****
+        </div>
+
+        <div class="acoes">
+
+            <i class="fa-regular fa-eye" onclick="mostrarSenha(this)"></i>
+
+            <i class="fa-solid fa-pen"></i>
+
+            <i class="fa-regular fa-trash-can" onclick="excluirSenha(this)"></i>
+        </div>
+
+    </div>
+
+
+    <div class="card-senha">
+
+        <div class="dados-esquerda">
+
+            <div>
+                <h3>Portal Gov</h3>
+                <p>maria.silva03@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="senha" data-senha="gov123">
+            *****
+        </div>
+
+        <div class="acoes">
+
+            <i class="fa-regular fa-eye" onclick="mostrarSenha(this)"></i>
+
+            <i class="fa-solid fa-pen"></i>
+
+            <i class="fa-regular fa-trash-can" onclick="excluirSenha(this)"></i>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="paginacao">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+            <span class="pagina ativa-pagina">1</span>
+
+            <span class="pagina">2</span>
+
+            <span class="pagina">3</span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div class="modal" id="modal">
+
+    <div class="modal-conteudo">
+
+        <h2>Adicionar Senha</h2>
+
+        <input type="text" id="nomeServico" placeholder="Nome do serviço">
+
+        <input type="text" id="emailServico" placeholder="Email ou usuário">
+
+        <input type="text" id="senhaServico" placeholder="Senha">
+
+        <button onclick="adicionarSenha()">
+            Salvar
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

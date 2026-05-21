@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte - Easy Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylesuporte.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="menulateral">
+
+    <div>
+
+      <div class="logo">
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+      <nav>
+
+        <ul>
+
+          <li onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house"></i>
+            Início
+          </li>
+
+          <li onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li class="ativo" onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+    <button class="sairconta" onclick="sairConta()">
+      Sair da conta
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+  </div>
+
+  <main class="conteudo">
+
+    <header class="conteudotopo">
+
+      <div>
+
+        <h1>Ajuda e Suporte</h1>
+
+        <p>Como podemos ajudar?</p>
+
+      </div>
+
+      <div class="botaolateral">
+
+        <button onclick="aumentarFonte()">+A</button>
+
+        <button onclick="diminuirFonte()">-A</button>
+
+        <button onclick="modoEscuro()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+
+        <button onclick="notificacao()">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+
+        <button onclick="perfil()">
+          <i class="fa-solid fa-user"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+    <!-- BUSCA -->
+
+    <div class="buscar-ajuda">
+
+      <input type="text" placeholder="Buscar ajuda">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+    <!-- CONTEÚDO AJUDA -->
+
+    <div class="conteudo-ajuda">
+
+      <!-- PERGUNTAS -->
+
+      <div class="perguntas">
+
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="card-pergunta">
+
+          <div class="item-pergunta" onclick="abrirPopupPergunta(
+          'Como acessar serviços?',
+          'Para acessar os serviços disponíveis, utilize o menu lateral da plataforma. Escolha a categoria desejada e clique na opção correspondente. Você também pode acessar os tutoriais para receber ajuda detalhada.'
+          )">
+
+            <span>Como acessar serviços?</span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+          </div>
+
+          <div class="item-pergunta" onclick="abrirPopupPergunta(
+          'Como salvar senhas?',
+          'Acesse a área de gerenciamento de senhas e clique em adicionar nova senha. Preencha os dados solicitados e confirme o salvamento. Suas informações serão armazenadas com segurança.'
+          )">
+
+            <span>Como salvar senhas?</span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+          </div>
+
+          <div class="item-pergunta" onclick="abrirPopupPergunta(
+          'Como ativar áudio?',
+          'Entre na área de configurações e habilite a leitura de tela. Após ativar, o sistema poderá utilizar recursos sonoros para auxiliar na navegação e acessibilidade.'
+          )">
+
+            <span>Como ativar áudio?</span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TUTORIAIS -->
+
+      <div class="tutoriais">
+
+        <h2>Tutoriais</h2>
+
+        <div class="box-tutorial">
+
+          <img src="LOGOTUTORIAL.jpeg" alt="Tutorial">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTATO -->
+
+    <div class="contato">
+
+      <h2>Entre em Contato</h2>
+
+      <div class="cards-contato">
+
+        <div class="card-contato">
+
+          <i class="fa-regular fa-message"></i>
+
+          <h3>Chat Virtual</h3>
+
+          <p>Fale com a nossa equipe agora</p>
+
+        </div>
+
+        <div class="card-contato">
+
+          <i class="fa-regular fa-envelope"></i>
+
+          <h3>E-mail Suporte</h3>
+
+          <p>Resposta em até 24h</p>
+
+        </div>
+
+        <div class="card-contato">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <h3>Telefone Suporte</h3>
+
+          <p>Seg à Sex, 8h às 18h</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- POPUP -->
+
+<div class="popup-ajuda" id="popupAjuda">
+
+  <div class="popup-conteudo-ajuda">
+
+    <div class="topo-popup">
+
+      <h2 id="tituloPopup"></h2>
+
+      <button onclick="fecharPopupAjuda()">
+
+        <i class="fa-solid fa-xmark"></i>
+
+      </button>
+
+    </div>
+
+    <p id="textoPopup"></p>
+
+  </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

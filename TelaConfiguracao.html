@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações - Easy Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleconfiguracao.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="menulateral">
+
+    <div>
+
+      <div class="logo">
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+      <nav>
+        <ul>
+          <li  onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house">
+          </i> Início</li>
+          </li>
+
+
+          <li onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li class="ativo" onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="sairconta">
+      Sair da conta
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+  </div>
+
+
+  <main class="conteudo">
+
+
+    <header class="conteudotopo">
+
+      <div>
+        <h1>Configurações</h1>
+        <p>Personalize sua experiência conforme suas necessidades.</p>
+      </div>
+
+      <div class="botaolateral">
+
+    <button id="btnAumentar" onclick="aumentarFonte()">+A</button>
+
+    <button id="btnDiminuir" onclick="diminuirFonte()">-A</button>
+
+    <button id="btnContraste" onclick="modoEscuro()">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+    </button>
+
+    <button id="btnNotificacao" onclick="notificacao()">
+      <i class="fa-solid fa-volume-high"></i>
+    </button>
+
+    <button id="btnPerfil" onclick="perfil()">
+      <i class="fa-solid fa-user"></i>
+    </button>
+
+</div>
+    </header>
+
+    
+
+    <h2 class="titulo-acessibilidade">Acessibilidade</h2>
+
+
+    <div class="cards-config">
+
+
+      <div class="card-config">
+
+        <h3>Recursos Visuais</h3>
+
+        <div class="item-config">
+
+          <span>Alterar tamanho da fonte</span>
+
+          <label class="switch">
+           <input type="checkbox" checked onchange="toggleFonte(this)">
+            <span class="slider"></span>
+          </label>
+
+        </div>
+
+        <div class="item-config">
+
+          <span>Alto Contraste</span>
+
+          <label class="switch">
+            <input type="checkbox" checked onchange="toggleFonte(this)">            
+            <span class="slider"></span>
+          </label>
+
+        </div>
+
+      </div>
+
+      
+
+      <div class="card-config">
+
+        <h3>Recursos Sonoros</h3>
+
+        <div class="item-config">
+
+          <span>Ativar leitura de tela</span>
+
+          <label class="switch">
+            <input type="checkbox" checked onchange="toggleLeitura(this)">
+            <span class="slider"></span>
+          </label>
+
+        </div>
+
+        <div class="item-config">
+
+          <span>Ativar comandos de voz</span>
+
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+
+        </div>
+
+       <div class="item-config">
+
+        <span class="titulo-item">Volume do guia sonoro</span>
+
+         <div class="volume">
+
+        <i class="fa-solid fa-plus" onclick="aumentarVolume()"></i>
+
+        <span id="valorVolume">78</span>
+
+        <i class="fa-solid fa-minus" onclick="diminuirVolume()"></i>
+
+    </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

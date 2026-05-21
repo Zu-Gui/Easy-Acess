@@ -1,0 +1,281 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f7f4ff, #efecf8);
+    color: #3b0f68;
+    min-height: 100vh;
+}
+
+/* =========================
+   MENU SUPERIOR
+========================= */
+.top-header {
+    width: 100%;
+    height: 74px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #3b0f68;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-text {
+    font-size: 18px;
+    color: #7e3ac5;
+    font-weight: 500;
+}
+
+.btn-cadastrar {
+    background: linear-gradient(90deg, #491d75, #7e3ac5);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(109, 40, 217, 0.3);
+    transition: 0.3s;
+}
+
+.btn-cadastrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(109, 40, 217, 0.35);
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+.cadastro-page {
+    padding: 20px 40px;
+}
+
+.cadastro-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #ddd6fe;
+    border-radius: 28px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    min-height: 780px;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.06);
+}
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+.left-panel {
+    background: #f8f5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 50px;
+}
+
+.left-content {
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.left-content h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #3b0f68;
+    margin-bottom: 16px;
+    white-space: nowrap;
+}
+
+.left-content h1 span {
+    color: #7e3ac5;
+}
+
+.left-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #3b0f68;
+    margin-bottom: 25px;
+}
+
+.illustration {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.illustration img {
+    width: 100%;
+    max-width: 360px;
+    object-fit: contain;
+}
+
+/* =========================
+   LADO DIREITO
+========================= */
+.right-panel {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 70px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 560px;
+}
+
+.form-box h2 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #3b0f68;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3b0f68;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 52px;
+    border: 2px solid #e2ddf7;
+    border-radius: 12px;
+    padding: 0 18px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #3b0f68;
+    outline: none;
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #7e3ac5;
+    box-shadow: 0 0 4px rgba(124, 58, 237, 0.08);
+}
+
+.form-group input::placeholder {
+    color: #7b7ea5;
+}
+
+/* Remove seta padrão e padroniza select */
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #7e3ac5 50%),
+                      linear-gradient(135deg, #7e3ac5 50%, transparent 50%);
+    background-position:
+        calc(100% - 22px) calc(50% - 3px),
+        calc(100% - 16px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 45px;
+}
+
+/* =========================
+   BOTÃO CADASTRAR
+========================= */
+.btn-submit {
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #491d75, #7e3ac5);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 8px 20px rgba(91, 33, 182, 0.25);
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(91, 33, 182, 0.3);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 1024px) {
+    .cadastro-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .top-header {
+        padding: 15px 20px;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cadastro-page {
+        padding: 20px;
+    }
+
+    .right-panel {
+        padding: 40px;
+    }
+
+    .form-box h2 {
+        font-size: 36px;
+    }
+}

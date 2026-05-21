@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela Serviço - Easy Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleservico.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="menulateral">
+    <div>
+      <div class="logo">
+        <img src="logoeasy.png" alt="Logo">
+      </div>
+
+      <nav>
+        <ul>
+          <li onclick="abrirPagina('TelaFuncional.html')">
+            <i class="fa-solid fa-house">
+          </i> Início</li>
+          </li>
+
+
+          <li class="ativo" onclick="abrirPagina('TelaServico.html')">
+            <i class="fa-solid fa-building-columns"></i>
+            Serviços Bancários
+          </li>
+
+          <li onclick="abrirPagina('TelaServicoSocial.html')">
+            <i class="fa-solid fa-users"></i>
+            Serviços Sociais
+          </li>
+
+          <li onclick="abrirPagina('TelaGerenciamentoSenha.html')">
+            <i class="fa-solid fa-lock"></i>
+            Gerenciar Senhas
+          </li>
+
+          <li onclick="abrirPagina('TelaTutorial.html')">
+            <i class="fa-solid fa-book"></i>
+            Tutoriais
+          </li>
+
+          <li onclick="abrirPagina('TelaPerfil.html')">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+          </li>
+
+          <li onclick="abrirPagina('TelaSuporte.html')">
+            <i class="fa-solid fa-circle-question"></i>
+            Ajuda
+          </li>
+
+          <li onclick="abrirPagina('TelaConfiguracao.html')">
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="sairconta" onclick="sairConta()">
+      Sair da conta <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+</div>
+
+<main class="conteudo">
+
+    <header class="conteudotopo">
+      <div>
+        <h1>Serviços Bancários</h1>
+        <p>Encontre e acesse seus serviços financeiros com facilidade.</p>
+      </div>
+
+      <div class="botaolateral">
+        <button onclick="aumentarFonte()">+A</button>
+        <button onclick="diminuirFonte()">-A</button>
+        <button onclick="modoEscuro()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button onclick="notificacao()">
+         <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button onclick="perfil()">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="linha">
+  
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="Buscar serviço">
+            <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+  </div>
+
+  <button class="botao-adicionar" onclick="abrirPopup()">
+    <i class="fa-solid fa-plus"></i>
+    Adicionar
+</button>
+
+</div>
+
+<br>
+<div class="card-banco">
+  <img src="logocaixa.jpeg" alt="Caixa" class="logo-banco">
+
+  <div class="info-banco">
+    <h3>Caixa Econômica Federal</h3>
+    <p>Acesse sua conta, pagamentos, transferências e muito mais.</p>
+
+    <div class="acoes">
+      <button class="btn-acessar"
+          onclick="window.open('https://www.caixa.gov.br/Paginas/home-caixa.aspx', '_blank')">
+          ACESSAR
+      </button>
+      <button class="btn-senha">SALVAR SENHA</button>
+    </div>
+  </div>
+
+</div>
+<br>
+<div class="card-banco">
+
+  <img src="insslogo.jpg" alt="INSS" class="logo-banco">
+  <div class="info-banco">
+    <h3>INSS</h3>
+    <p>Consulta benefícios, agendamentos e serviços.</p>
+
+    <div class="acoes">
+      <button class="btn-acessar"
+          onclick="window.open('https://meu.inss.gov.br/#/login', '_blank')">
+          ACESSAR
+      </button>
+      <button class="btn-senha">SALVAR SENHA</button>
+    </div>
+  </div>
+
+</div>
+<br>
+<div class="card-banco">
+
+  <img src="sicooblogo.png" alt="Sicoob" class="logo-banco">
+  <div class="info-banco">
+    <h3>Sicoob</h3>
+    <p>Acesse sua conta</p>
+
+    <div class="acoes">
+      <button class="btn-acessar"
+          onclick="window.open('https://www.sicoob.com.br/', '_blank')">
+          ACESSAR
+      </button>
+      <button class="btn-senha">SALVAR SENHA</button>
+    </div>
+  </div>
+
+</div>
+<div class="card-banco">
+    <div id="listaBancos">
+
+    <!-- SEUS CARDS JÁ EXISTENTES -->
+
+</div>
+</div>
+
+<div class="popup-bancos" id="popupBancos">
+
+    <div class="popup-conteudo">
+
+        <h2>Selecione um banco</h2>
+
+        <div class="opcoes-bancos">
+
+            <button onclick="adicionarBanco('Itaú')">Itaú</button>
+
+            <button onclick="adicionarBanco('Bradesco')">Bradesco</button>
+
+            <button onclick="adicionarBanco('Santander')">Santander</button>
+
+            <button onclick="adicionarBanco('Banco do Brasil')">Banco do Brasil</button>
+
+        </div>
+
+        <button class="fechar-popup" onclick="fecharPopup()">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
